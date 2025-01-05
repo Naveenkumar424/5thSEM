@@ -1,0 +1,75 @@
+### Asymptotic Notations and Basic Efficiency Classes
+
+Asymptotic notations are mathematical tools used to describe the behavior of algorithms as the input size grows. They allow us to classify algorithms based on their performance and efficiency.
+
+### Informal Introduction
+
+Asymptotic notations give us a high-level understanding of how an algorithm behaves with large inputs. They help us compare different algorithms by focusing on their growth rates instead of exact timings.
+
+### O-Notation (Big O)
+
+- **Definition**: Big O notation provides an upper bound on the running time of an algorithm. It describes the worst-case scenario.
+- **Usage**: It tells us the maximum amount of time an algorithm can take to complete, given the input size.
+- **Example**: If an algorithm takes at most \( c \cdot f(n) \) time for large enough \( n \), it is said to be \( O(f(n)) \).
+
+```plaintext
+f(n) = O(g(n)) if and only if there exist positive constants c and n0 such that f(n) ≤ c * g(n) for all n ≥ n0.
+```
+
+### Ω-Notation (Big Omega)
+
+- **Definition**: Big Omega notation provides a lower bound on the running time of an algorithm. It describes the best-case scenario.
+- **Usage**: It tells us the minimum amount of time an algorithm can take to complete, given the input size.
+- **Example**: If an algorithm takes at least \( c \cdot g(n) \) time for large enough \( n \), it is said to be \( Ω(g(n)) \).
+
+```plaintext
+f(n) = Ω(g(n)) if and only if there exist positive constants c and n0 such that f(n) ≥ c * g(n) for all n ≥ n0.
+```
+
+### θ-Notation (Theta)
+
+- **Definition**: Theta notation provides both an upper and a lower bound on the running time of an algorithm. It describes the average-case scenario.
+- **Usage**: It tells us the exact asymptotic behavior of the algorithm as the input size grows.
+- **Example**: If an algorithm takes \( c1 \cdot g(n) \) time in the best case and \( c2 \cdot g(n) \) time in the worst case for large enough \( n \), it is said to be \( θ(g(n)) \).
+
+```plaintext
+f(n) = θ(g(n)) if and only if there exist positive constants c1, c2, and n0 such that c1 * g(n) ≤ f(n) ≤ c2 * g(n) for all n ≥ n0.
+```
+
+### Mathematical Analysis of Non-Recursive Algorithms
+
+1. **Identify the Basic Operations**: Determine the fundamental operations contributing to the running time.
+2. **Count the Operations**: Calculate the number of times each basic operation is executed.
+3. **Express in Terms of Input Size**: Formulate the running time as a function of the input size (n).
+4. **Simplify the Expression**: Use asymptotic notations to describe the running time.
+
+**Example**: Consider a simple for-loop that iterates \( n \) times:
+
+```python
+for i in range(n):
+    # Constant time operation
+    print(i)
+```
+
+- **Basic Operation**: Printing \( i \) (executed \( n \) times)
+- **Running Time**: \( O(n) \)
+
+### Mathematical Analysis of Recursive Algorithms
+
+1. **Determine the Recurrence Relation**: Formulate the running time of the algorithm as a recurrence relation.
+2. **Solve the Recurrence Relation**: Use techniques like substitution, recursion trees, or the Master Theorem to solve the recurrence and find the running time.
+
+**Example**: Consider the recursive algorithm for calculating the \( n \)th Fibonacci number:
+
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+```
+
+- **Recurrence Relation**: \( T(n) = T(n-1) + T(n-2) + O(1) \)
+- **Solution**: The running time is exponential, i.e., \( T(n) = O(2^n) \)
+
+Understanding and applying these concepts is crucial for analyzing and comparing the efficiency of algorithms. If you need more examples or further explanations, feel free to ask! 😊📘📊

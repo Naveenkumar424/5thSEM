@@ -1,0 +1,93 @@
+### Divide-and-Conquer
+
+**Introduction:**
+Divide-and-Conquer is an algorithmic paradigm that breaks a problem into smaller sub-problems, solves each sub-problem recursively, and combines their solutions to solve the original problem. It is particularly effective for problems that can be divided into smaller, similar problems.
+
+**Key Steps:**
+1. **Divide**: Break the problem into smaller sub-problems.
+2. **Conquer**: Solve each sub-problem recursively.
+3. **Combine**: Merge the solutions of the sub-problems to get the solution to the original problem.
+
+### Merge Sort
+
+**Merge Sort** is a comparison-based sorting algorithm that uses the divide-and-conquer paradigm.
+
+**Steps:**
+1. **Divide**: Split the array into two halves.
+2. **Conquer**: Recursively sort each half.
+3. **Combine**: Merge the two sorted halves to produce the sorted array.
+
+**Time Complexity**: O(n log n)
+
+**Example:**
+```plaintext
+Unsorted Array: [38, 27, 43, 3, 9, 82, 10]
+1. Divide: [38, 27, 43, 3] and [9, 82, 10]
+2. Conquer: [27, 38, 43, 3] and [9, 10, 82]
+3. Combine: [3, 9, 10, 27, 38, 43, 82]
+Sorted Array: [3, 9, 10, 27, 38, 43, 82]
+```
+
+### Quick Sort
+
+**Quick Sort** is another comparison-based sorting algorithm that uses the divide-and-conquer paradigm.
+
+**Steps:**
+1. **Divide**: Choose a pivot element and partition the array into two halves such that elements less than the pivot are on the left, and elements greater than the pivot are on the right.
+2. **Conquer**: Recursively sort the two halves.
+3. **Combine**: Since the array is sorted in-place, no additional steps are required to combine.
+
+**Time Complexity**: Average case O(n log n), Worst case O(n^2) (if the pivot is poorly chosen)
+
+**Example:**
+```plaintext
+Unsorted Array: [10, 7, 8, 9, 1, 5]
+1. Pivot: 8
+2. Divide: [1, 7, 5, 8] and [9, 10]
+3. Conquer: [1, 5, 7] and [9, 10]
+4. Combine: [1, 5, 7, 8, 9, 10]
+Sorted Array: [1, 5, 7, 8, 9, 10]
+```
+
+### Binary Search
+
+**Binary Search** is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the search interval in half.
+
+**Steps:**
+1. **Divide**: Compare the target value to the middle element of the array.
+2. **Conquer**: If the target value is equal to the middle element, return the index. If the target value is less than the middle element, search the left half. If the target value is greater, search the right half.
+3. **Combine**: The result is found when the search interval is reduced to a single element.
+
+**Time Complexity**: O(log n)
+
+**Example:**
+```plaintext
+Sorted Array: [1, 3, 5, 7, 9, 11]
+Target: 7
+1. Compare to middle element (5).
+2. Since 7 > 5, search the right half.
+3. Compare to middle element (9).
+4. Since 7 < 9, search the left half.
+5. Compare to middle element (7).
+6. Target found at index 3.
+```
+
+### Binary Tree Traversals and Related Properties
+
+**Binary Tree Traversals**: There are three main types of tree traversal techniques used to visit all nodes in a binary tree:
+
+1. **In-Order Traversal**: Visit the left subtree, the root node, and then the right subtree.
+   - **Example**: For a tree with root 2, left child 1, and right child 3, the in-order traversal is [1, 2, 3].
+
+2. **Pre-Order Traversal**: Visit the root node, the left subtree, and then the right subtree.
+   - **Example**: For a tree with root 2, left child 1, and right child 3, the pre-order traversal is [2, 1, 3].
+
+3. **Post-Order Traversal**: Visit the left subtree, the right subtree, and then the root node.
+   - **Example**: For a tree with root 2, left child 1, and right child 3, the post-order traversal is [1, 3, 2].
+
+**Related Properties**:
+- **Height**: The length of the longest path from the root to a leaf.
+- **Depth**: The length of the path from a given node to the root.
+- **Balanced Tree**: A tree where the height difference between left and right subtrees of any node is at most one.
+
+These notes provide a comprehensive overview of the divide-and-conquer paradigm and various algorithms that use this approach. If you need further details or examples, feel free to ask! 😊📘🌳

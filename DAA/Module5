@@ -1,0 +1,102 @@
+### Decrease-and-Conquer
+
+**Introduction:**
+Decrease-and-Conquer is an algorithmic paradigm that reduces a problem instance to a smaller instance of the same problem, solves the smaller instance recursively, and then extends the solution to solve the original problem. The reduction can be by a constant amount or by a multiplicative factor.
+
+### Insertion Sort
+
+**Insertion Sort** is a simple comparison-based sorting algorithm that uses the decrease-and-conquer paradigm.
+
+**Steps:**
+1. **Divide**: Consider the first element of the array as sorted and the rest as unsorted.
+2. **Conquer**: Take each element from the unsorted part and insert it into the correct position in the sorted part.
+3. **Combine**: Repeat until all elements are sorted.
+
+**Time Complexity**: O(n^2)
+
+**Example:**
+```plaintext
+Unsorted Array: [5, 2, 9, 1, 5, 6]
+Step 1: [2, 5, 9, 1, 5, 6]
+Step 2: [2, 5, 9, 1, 5, 6]
+Step 3: [1, 2, 5, 9, 5, 6]
+Step 4: [1, 2, 5, 5, 9, 6]
+Step 5: [1, 2, 5, 5, 6, 9]
+Sorted Array: [1, 2, 5, 5, 6, 9]
+```
+
+### Topological Sorting
+
+**Topological Sorting** is an ordering of vertices in a directed acyclic graph (DAG) such that for every directed edge (u, v), vertex u comes before vertex v in the ordering.
+
+**Steps:**
+1. **Decrease**: Remove vertices with no incoming edges and add them to the sorted order.
+2. **Conquer**: Remove the edges outgoing from these vertices.
+3. **Combine**: Repeat until all vertices are processed.
+
+**Time Complexity**: O(V + E), where V is the number of vertices and E is the number of edges.
+
+**Example:**
+```plaintext
+Graph: A -> B -> C, A -> D -> E
+Topological Sort: A, B, D, C, E
+```
+
+### Greedy Technique
+
+**Introduction:**
+The Greedy Technique is an algorithmic paradigm that builds up a solution piece by piece, always choosing the next piece with the most immediate benefit. Greedy algorithms make the locally optimal choice at each step, hoping to find the global optimum.
+
+### Prim's Algorithm
+
+**Prim's Algorithm** is a greedy algorithm for finding the Minimum Spanning Tree (MST) of a weighted undirected graph.
+
+**Steps:**
+1. **Initialize**: Start with an arbitrary vertex and add it to the MST.
+2. **Select**: Choose the smallest edge connecting a vertex in the MST to a vertex outside the MST.
+3. **Repeat**: Add the selected edge to the MST and repeat until all vertices are included.
+
+**Time Complexity**: O(E log V), where V is the number of vertices and E is the number of edges.
+
+**Example:**
+```plaintext
+Graph: (A, B, 1), (A, C, 3), (B, C, 2)
+MST: A - B - C with total weight 3
+```
+
+### Kruskal's Algorithm
+
+**Kruskal's Algorithm** is another greedy algorithm for finding the Minimum Spanning Tree (MST) of a weighted undirected graph.
+
+**Steps:**
+1. **Sort**: Sort all edges in non-decreasing order of their weight.
+2. **Select**: Add edges to the MST one by one, ensuring no cycles are formed, until all vertices are included.
+3. **Combine**: Use a union-find data structure to manage the merging of sets.
+
+**Time Complexity**: O(E log E), where E is the number of edges.
+
+**Example:**
+```plaintext
+Graph: (A, B, 1), (A, C, 3), (B, C, 2)
+MST: A - B - C with total weight 3
+```
+
+### Dijkstra's Algorithm
+
+**Dijkstra's Algorithm** is a greedy algorithm for finding the shortest path from a source vertex to all other vertices in a weighted graph.
+
+**Steps:**
+1. **Initialize**: Set the distance to the source vertex to 0 and to all other vertices to infinity. Mark all vertices unvisited.
+2. **Select**: Choose the unvisited vertex with the smallest distance, mark it as visited.
+3. **Update**: Update the distance of the neighboring vertices of the current vertex.
+4. **Repeat**: Repeat until all vertices are visited or the shortest paths to all vertices are determined.
+
+**Time Complexity**: O(V^2) with a simple implementation, or O(E + V log V) with a priority queue.
+
+**Example:**
+```plaintext
+Graph: (A, B, 1), (A, C, 4), (B, C, 2)
+Shortest Path from A to C: A - B - C with total weight 3
+```
+
+These notes cover the key concepts and algorithms related to Decrease-and-Conquer and the Greedy Technique. If you need further details or examples, feel free to ask! 😊📘📊
