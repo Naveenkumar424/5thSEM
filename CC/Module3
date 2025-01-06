@@ -1,0 +1,25 @@
+The **Aneka Cloud Application Platform** is a comprehensive framework developed by Manjrasoft for creating, deploying, and managing cloud applications. Here's a brief overview of its key components and deployment modes:
+
+### Framework Overview
+Aneka is a **Platform as a Service (PaaS)** solution that allows developers to harness disparate computing resources, such as desktop PCs, multicore servers, data centers, and virtual cloud infrastructures. It provides a rich set of APIs for developing distributed applications using various programming models like **Tasks, Threads, and MapReduce**.
+
+### Anatomy of the Aneka Container
+The Aneka container is the basic building block of the middleware. It includes:
+- **Fabric Services**: These provide access to resource-provisioning subsystems and monitoring features.
+- **Foundation Services**: These manage the core infrastructure and logical management of the distributed system.
+- **Execution Services**: These handle the scheduling and execution of applications.
+
+### Building Aneka Clouds
+#### Infrastructure Organization
+Aneka leverages both virtual and physical hardware to deploy clouds. The Resource Provisioning Service acquires resources on demand, while the Administrative Console manages physical hardware.
+
+#### Logical Organization
+The logical organization of Aneka Clouds can vary based on the configuration of container instances - UNIT- 2 Cloud Application ... - Studocu](https://www.studocu.com/in/document/karnatak-university/computer-application/unit-2-cloud-computingnep/112021591). A common setup is the **master-worker configuration**, where separate nodes handle storage and computation - UNIT- 2 Cloud Application ... - Studocu](https://www.studocu.com/in/document/karnatak-university/computer-application/unit-2-cloud-computingnep/112021591).
+
+### Deployment Modes
+- **Private Cloud Deployment Mode**: Resources are hosted within an organization's infrastructure, providing control and security.
+- **Public Cloud Deployment Mode**: Resources are hosted by third-party providers like AWS, Azure, or Google Cloud, offering scalability and cost-effectiveness.
+- **Hybrid Cloud Deployment Mode**: A combination of private and public clouds, allowing organizations to leverage the benefits of both.
+
+Would you like more details on any specific aspect of the Aneka platform?
+
